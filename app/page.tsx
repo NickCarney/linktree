@@ -289,7 +289,7 @@ export default function Home() {
                     </div>
                   </div>
                 </a>
-                <a
+                {/* <a
                   href="https://vacaition.org"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -320,7 +320,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
