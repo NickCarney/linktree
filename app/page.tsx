@@ -222,7 +222,7 @@ export default function Home() {
               </h2>
               <div className="space-y-3">
                 <a
-                  href="https://fpl-beta.vercel.app"
+                  href="https://fplgenie.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-slate-200 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-600"
@@ -256,7 +256,7 @@ export default function Home() {
                     </div>
                   </div>
                 </a>
-                <a
+                {/* <a
                   href="https://pl-stats.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -288,7 +288,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                </a>
+                </a> */}
                 <a
                   href="https://vacaition.org"
                   target="_blank"
