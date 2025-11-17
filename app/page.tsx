@@ -1,6 +1,19 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
+  const handleResumeClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/resume_carney.pdf');
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      window.open(blobUrl, '_blank');
+    } catch (error) {
+      console.error('Error loading resume:', error);
+    }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <main className="container mx-auto max-w-md px-6 py-12">
@@ -23,6 +36,15 @@ export default function Home() {
           >
             nick12carney@gmail.com
           </a>
+          <div className="mt-2">
+            <a
+              href="#"
+              onClick={handleResumeClick}
+              className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:underline text-sm"
+            >
+              View Resume (PDF)
+            </a>
+          </div>
         </div>
 
         {/* Links Section */}
