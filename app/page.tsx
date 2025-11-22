@@ -6,12 +6,12 @@ export default function Home() {
   const handleResumeClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch('/resume_carney.pdf');
+      const response = await fetch("/resume_carney.pdf");
       const blob = await response.blob();
       const blobUrl = URL.createObjectURL(blob);
-      window.open(blobUrl, '_blank');
+      window.open(blobUrl, "_blank");
     } catch (error) {
-      console.error('Error loading resume:', error);
+      console.error("Error loading resume:", error);
     }
   };
   return (
@@ -244,7 +244,7 @@ export default function Home() {
               </h2>
               <div className="space-y-3">
                 <a
-                  href="https://fplgenie.com"
+                  href="https://fplgenie.azurewebsites.net"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-slate-200 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-600"
@@ -255,11 +255,12 @@ export default function Home() {
                         FPL Genie
                       </h3>
                       <p className="text-sm text-slate-600 dark:text-slate-400">
-                        Typescript Next.js website for all things fantasy
-                        premier league. Put in your team name/id and get in
-                        depth analysis of your team. Ranging from transfer
-                        suggestions, to optimal lineup, to starting lineup
-                        preditions.
+                        Full-stack Fantasy Premier League application built with
+                        Next.js 14, TypeScript, React, and SQL Server.
+                        Integrates with the official FPL API to provide player
+                        data, team statistics, and fixture information.
+                        Real-time insights for everything FPL including transfer
+                        suggestions and predictions.
                       </p>
                     </div>
                     <div className="w-4 h-4 text-slate-400">
